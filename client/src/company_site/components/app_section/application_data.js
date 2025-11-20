@@ -4,6 +4,7 @@ import receptemistIcon from '../../images/app_logos/receptemist_icon.png';
 import temiConciergeIcon from '../../images/app_logos/temi_concierge_icon.png';
 import temiWayFinderIcon from '../../images/app_logos/temi_wayfinder_icon.png';
 import temiEyeIcon from '../../images/app_logos/temi_eye_icon.png';
+import iaqIcon from '../../images/app_logos/iaq_icon.png';
 
 export const applicationsData = [
   {
@@ -45,5 +46,11 @@ export const applicationsData = [
     description: 'A security application for temi robot with patrolling and live video feed capabilities. ' +
       'Create patrol routes from temi\'s saved locations and monitor and record from command centre.',
     url: 'https://github.com/temideveloper/Rs-App-Guides/blob/master/TemiEye/preview.md'
+  },
+  {
+    imageSrc: iaqIcon,
+    title: 'IAQ Monitor',
+    description: 'An air-quality monitoring app for the temi robot that connects to IAQ sensors to collect ' + 
+    'real-time readings and perform scheduled patrols to gather air-quality data.'
   },
 ];

@@ -138,10 +138,10 @@ const galleryData = [
         src: getS3AssetUrl('offices_public_spaces5.mp4'),
         type: VID_TYPE,
       },
-      /*{
+      {
         src: getS3AssetUrl('offices_public_spaces6.mp4'),
         type: VID_TYPE,
-      },*/
+      },
     ],
   },
   {
