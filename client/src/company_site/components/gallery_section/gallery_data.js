@@ -23,7 +23,7 @@ const galleryData = [
     width: '34%',
     gallery: [
       {
-        src: getS3AssetUrl('healthcare1.mp4'),
+        src: getS3AssetUrl('healthcare1.mp4'), 
         type: VID_TYPE,
       },
       {
@@ -36,6 +36,10 @@ const galleryData = [
       },
       {
         src: getS3AssetUrl('healthcare4.mp4'),
+        type: VID_TYPE,
+      },
+      {
+        src: getS3AssetUrl('healthcare5.mp4'),
         type: VID_TYPE,
       },
     ],
@@ -66,14 +70,14 @@ const galleryData = [
         src: getS3AssetUrl('autonomous_guide5.mp4'),
         type: VID_TYPE,
       },
-      {
+      /*{
         src: getS3AssetUrl('autonomous_guide6.mp4'),
         type: VID_TYPE,
       },
       {
         src: getS3AssetUrl('autonomous_guide7.mp4'),
         type: VID_TYPE,
-      },
+      },*/
     ],
   },
   {
@@ -83,16 +87,16 @@ const galleryData = [
     width: '33%',
     gallery: [
       {
-        src: getS3AssetUrl('education1.jpg'),
-        type: IMG_TYPE,
+        src: getS3AssetUrl('education1.mp4'),
+        type: VID_TYPE,
       },
       {
-        src: getS3AssetUrl('education2.jpg'),
-        type: IMG_TYPE,
+        src: getS3AssetUrl('education2.mp4'),
+        type: VID_TYPE,
       },
       {
-        src: getS3AssetUrl('education3.jpg'),
-        type: IMG_TYPE,
+        src: getS3AssetUrl('education3.mp4'),
+        type: VID_TYPE,
       },
       {
         src: getS3AssetUrl('education4.mp4'),
@@ -102,42 +106,42 @@ const galleryData = [
         src: getS3AssetUrl('education5.mp4'),
         type: VID_TYPE,
       },
-      {
+      /*{
         src: getS3AssetUrl('education6.mp4'),
         type: VID_TYPE,
-      },
+      },*/
     ],
   },
   {
-    title: 'Home / Office',
-    description: 'Temi at Home and Office! ',
+    title: 'Offices / Public Spaces',
+    description: 'Temi at Offices and Public Spaces! ',
     url: HomeCard,
     width: '34%',
     gallery: [
       {
-        src: getS3AssetUrl('home_office1.mp4'),
+        src: getS3AssetUrl('offices_public_spaces1.mp4'),
         type: VID_TYPE,
       },
       {
-        src: getS3AssetUrl('home_office2.mp4'),
+        src: getS3AssetUrl('offices_public_spaces2.mp4'),
         type: VID_TYPE,
       },
       {
-        src: getS3AssetUrl('home_office3.mp4'),
+        src: getS3AssetUrl('offices_public_spaces3.mp4'),
         type: VID_TYPE,
       },
       {
-        src: getS3AssetUrl('home_office4.mp4'),
+        src: getS3AssetUrl('offices_public_spaces4.mp4'),
         type: VID_TYPE,
       },
       {
-        src: getS3AssetUrl('home_office5.mp4'),
+        src: getS3AssetUrl('offices_public_spaces5.mp4'),
         type: VID_TYPE,
       },
-      {
-        src: getS3AssetUrl('home_office6.mp4'),
+      /*{
+        src: getS3AssetUrl('offices_public_spaces6.mp4'),
         type: VID_TYPE,
-      },
+      },*/
     ],
   },
   {
@@ -183,6 +187,10 @@ const galleryData = [
       },
       {
         src: getS3AssetUrl('others3.mp4'),
+        type: VID_TYPE,
+      },
+      {
+        src: getS3AssetUrl('others4.mp4'),
         type: VID_TYPE,
       },
     ],
