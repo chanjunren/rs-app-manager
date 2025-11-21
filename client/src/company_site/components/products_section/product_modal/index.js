@@ -55,7 +55,7 @@ export default function ProductModal(props) {
     >
       <Fade in={openModal}>
         <div className={classes.modalContent}>
-          <iframe src={`${pdfFile}#view=fitH`} title='Specs' height="100%" width="100%" />
+          <iframe src={`${pdfFile}#view=FitV`} title='Specs' height="100%" width="100%" />
         </div>
       </Fade>
     </Modal>

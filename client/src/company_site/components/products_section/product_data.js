@@ -23,10 +23,10 @@ import TemiPlatformPreview from '../../images/products/temi_Platform_new.png';
 import TemiGoTrayPreview from '../../images/products/temi_Go(tray).png';
 import TemiGoProTrayPreview from '../../images/products/temi_Go_Pro.png';
 
-import TemiV3Pdf from './pdf_files/Temi v3 specs.pdf';
-import TemiPlatformPdf from './pdf_files/Temi platform specs new.pdf';
-import TemiGoTrayPdf from './pdf_files/TemiGo specs.pdf';
-import TemiGoProTrayPdf from './pdf_files/Temi GO Pro specs.pdf';
+import TemiV3Pdf from './pdf_files/temi V3 Specs.pdf';
+import TemiPlatformPdf from './pdf_files/temi PLATFORM Specs.pdf';
+import TemiGoTrayPdf from './pdf_files/temi GO Specs.pdf';
+import TemiGoProTrayPdf from './pdf_files/temi GO PRO Specs.pdf';
 
 // const productData = [
 //   {
@@ -75,7 +75,7 @@ import TemiGoProTrayPdf from './pdf_files/Temi GO Pro specs.pdf';
 
 const productData = [
   {
-    title: 'temi Platform',
+    title: 'temi PLATFORM',
     description: 'Autonomous Mobile Robot',
     cardImg: TemiPlatformPreview,
     pdfFile: TemiPlatformPdf,
@@ -96,14 +96,14 @@ const productData = [
   //   type: null,
   // },
   {
-    title: 'temi Go',
+    title: 'temi GO',
     description: 'Autonomous Delivery robot',
     cardImg: TemiGoTrayPreview,
     pdfFile: TemiGoTrayPdf,
     type: null,
   },
   {
-    title: 'temi Go Pro',
+    title: 'temi GO PRO',
     description: 'Autonomous Delivery robot',
     cardImg: TemiGoProTrayPreview,
     pdfFile: TemiGoProTrayPdf,
