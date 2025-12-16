@@ -15,6 +15,7 @@ const BlogPage = React.lazy(() => import('./company_site/pages/press'));
 const AboutPage = React.lazy(() => import('./company_site/pages/about_us'));
 const Home = React.lazy(() => import('./company_site/pages/index'));
 const HospitalBlog = React.lazy(() => import('./company_site/components/blog_section/blogs/service-robots-in-singapore-hospitals'));
+const PrivacyPolicy = React.lazy(() => import('./company_site/components/privacy_policy_section/privacy_policy'));
 const DashboardNav = React.lazy(() =>
   import('./app_manager/dashboard_nav/index'),
 );
@@ -68,6 +69,9 @@ function App() {
         </Route>
         <Route path="/blog/service-robots-in-singapore-hospitals">
           <HospitalBlog/>
+        </Route>
+        <Route path="/privacy-policy">
+          <PrivacyPolicy/>
         </Route>
         <Redirect to="/" />
       </Switch>

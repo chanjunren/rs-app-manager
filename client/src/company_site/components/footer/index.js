@@ -76,6 +76,14 @@ const Footer = () => {
               >
                 Specifications
               </a>
+              <a
+                className="footer-link"
+                href="/privacy-policy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy Policy
+              </a>
             </div>
           </div>
         </div>
