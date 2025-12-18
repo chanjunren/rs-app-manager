@@ -36,6 +36,18 @@ const PrivacyPolicyStyles = makeStyles((theme) => ({
     display: 'flex',
     alignContent: 'center',
     justifyContent: 'center',
+  },
+  WebsiteLink: {
+    color: '#01bf71',
+    textDecoration: 'underline',
+    cursor: 'pointer',
+    '&:hover': {
+      color: '#0c7634ff',
+      textDecoration: 'underline',
+    },
+  },
+  ExtraInfo:{
+    fontSize: '16px'
   }
 }));
 

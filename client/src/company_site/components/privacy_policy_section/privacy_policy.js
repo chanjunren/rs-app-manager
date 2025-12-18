@@ -27,14 +27,22 @@ const PrivacyPolicy = () => {
           Privacy Policy
         </Typography>
         <Typography className={privacyPolicyStyles.privacyPolicyText} style={{ textAlign: 'left' }}>
-          Last updated 16 Dec 2025
+          Last updated 18 Dec 2025
           <br/>
           <br/>
+          <em className={privacyPolicyStyles.ExtraInfo}>***For the use of temi without any customized applications developed by Robosolutions, please refer to this&nbsp;  
+              <a className={privacyPolicyStyles.WebsiteLink} href="https://www.robotemi.com/privacy-policy/" target="_blank" rel="noopener noreferrer">
+                link
+              </a>. <br />
+          ***For the use of customized applications developed by Robosolutions, please refer to the privacy policy below.</em>
           <br/>
           <br/>
           Robosolutions Pte. Ltd. ("Robosolutions", "we", "us", or "our") is committed to protecting your privacy.<br/>
           This application does NOT collect, store, transmit, or share any personal data. All functionality operates locally on your device.<br/>
-          If you have any questions about this privacy notice, please contact us at <em>enquiries@robosolutions.sg</em>.
+          If you have any questions about this privacy notice, please contact us at&nbsp;
+          <a href="mailto:enquiries@robosolutions.sg" className={privacyPolicyStyles.WebsiteLink}>
+            <em>enquiries@robosolutions.sg</em>
+          </a>.
         </Typography>
         <Typography className={privacyPolicyStyles.privacyPolicyHeader} variant='h4' color='secondary'>
           1. WHAT INFORMATION DO WE COLLECT?
@@ -127,7 +135,10 @@ const PrivacyPolicy = () => {
         </Typography>
         <Typography className={privacyPolicyStyles.privacyPolicyText} >
           If you have questions or comments about this privacy notice, you may contact us at: <br/>
-        Email: enquiries@robosolutions.sg
+        Email:&nbsp; 
+          <a href="mailto:enquiries@robosolutions.sg" className={privacyPolicyStyles.WebsiteLink}>
+            <em>enquiries@robosolutions.sg</em>
+          </a>
         </Typography>
       </div>
       <Footer />
