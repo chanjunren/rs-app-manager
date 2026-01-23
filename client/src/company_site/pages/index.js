@@ -11,6 +11,7 @@ import GallerySection from '../components/gallery_section';
 // import PressSection from '../components/press_section';
 import { withTheme } from '../../util/theme';
 import ContactUsSection from '../components/contact_us_section';
+import PartnerProductSection from '../components/partner_product_section';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,7 @@ const Home = () => {
       <SideBar isOpen={isOpen} toggle={toggle} />
       <HeroSection />
       <ProductsSection />
+      <PartnerProductSection />
       <GallerySection />
       <AppsSection />
       <ContactUsSection />
