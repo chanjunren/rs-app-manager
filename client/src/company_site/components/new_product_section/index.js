@@ -39,20 +39,20 @@ const NewProductSection = () => {
     };
 
     useEffect(() => {
-        const observers = cardRefs.current.map(card => {
-            if (!card) return null;
-            const observer = new ResizeObserver(syncHeights);
-            observer.observe(card);
-            return observer;
-        });
+    const observers = cardRefs.current.map(card => {
+        if (!card) return null;
+        const observer = new ResizeObserver(syncHeights);
+        observer.observe(card);
+        return observer;
+    });
 
-        window.addEventListener('resize', syncHeights);
+    window.addEventListener('resize', syncHeights);
 
-        return () => {
-            window.removeEventListener('resize', syncHeights);
-            observers.forEach(obs => obs && obs.disconnect());
-        };
-        }, [newProductsData]);
+    return () => {
+        window.removeEventListener('resize', syncHeights);
+        observers.forEach(obs => obs && obs.disconnect());
+    };
+    }, [newProductsData]);
 
   return (
     <div id="products" className={sectionClasses.root}>
