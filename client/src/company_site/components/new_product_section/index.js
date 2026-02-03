@@ -21,41 +21,31 @@ const NewProductSection = () => {
   const cardClasses = NewProductCardStyles();
   const cardRefs = useRef([]);
 
+  const syncHeights = () => {
+    cardRefs.current.forEach(el => {
+        if (el) el.style.height = 'auto';
+    });
+
+    const maxHeight = Math.max(
+        ...cardRefs.current.map(el => (el && el.offsetHeight) || 0)
+    );
+
+    // Safety cap (prevents runaway heights)
+    if (maxHeight > 1200) return;
+
+    cardRefs.current.forEach(el => {
+        if (el) el.style.height = maxHeight + 'px';
+    });
+    };
+
     useEffect(() => {
-        if (!cardRefs.current.length) return;
-
-        const syncHeights = () => {
-            // reset heights first
-            cardRefs.current.forEach(function (el) {
-            if (el) el.style.height = 'auto';
-            });
-
-            var maxHeight = Math.max.apply(
-            Math,
-            cardRefs.current.map(function (el) {
-                return (el && el.offsetHeight) || 0;
-            })
-            );
-
-            cardRefs.current.forEach(function (el) {
-            if (el) el.style.height = maxHeight + 'px';
-            });
-        };
-
         syncHeights();
-
-        var observer = new ResizeObserver(syncHeights);
-        cardRefs.current.forEach(function (el) {
-            if (el) observer.observe(el);
-        });
-
         window.addEventListener('resize', syncHeights);
 
-        return function () {
-            observer.disconnect();
+        return () => {
             window.removeEventListener('resize', syncHeights);
         };
-        }, [newProductsData]);
+    }, [newProductsData]);
 
   return (
     <div id="products" className={sectionClasses.root}>
@@ -103,6 +93,7 @@ const NewProductSection = () => {
                             height: 'auto',
                             objectFit: 'contain',
                         }}
+                        onLoad={() => syncHeights()}
                     />
                 </Box>
                 <CardContent sx={{ flexGrow: 1 }}>{newProduct.description}</CardContent>
