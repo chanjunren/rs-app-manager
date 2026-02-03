@@ -138,7 +138,7 @@ const NewProductSection = () => {
                 </Box>
                 <CardContent sx={{ flexGrow: 1 }}>{newProduct.description}</CardContent>
                 {newProduct.links && newProduct.links.length > 0 && (
-                    <Box mt={1} sx={{ marginBottom: 'auto' }}>
+                    <Box mt={1} sx={{ pt: 1, pb: 2 }}>
                         <Typography variant="body2" color="textSecondary">
                             Learn more:
                         </Typography>
