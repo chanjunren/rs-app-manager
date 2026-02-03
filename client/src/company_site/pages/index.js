@@ -12,6 +12,7 @@ import GallerySection from '../components/gallery_section';
 import { withTheme } from '../../util/theme';
 import ContactUsSection from '../components/contact_us_section';
 import PartnerProductSection from '../components/partner_product_section';
+import NewProductSection from '../components/new_product_section';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,8 +26,9 @@ const Home = () => {
       <NavBar toggle={toggle} />
       <SideBar isOpen={isOpen} toggle={toggle} />
       <HeroSection />
-      <ProductsSection />
-      <PartnerProductSection />
+      {/* <ProductsSection />
+      <PartnerProductSection /> */} {/*Old design where the product section is clickable cards and partner product seperated*/}
+      <NewProductSection/> {/*New design where the products are combined and shown in grid*/}
       <GallerySection />
       <AppsSection />
       <ContactUsSection />
