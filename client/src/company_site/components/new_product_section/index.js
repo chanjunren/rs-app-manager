@@ -39,13 +39,20 @@ const NewProductSection = () => {
     };
 
     useEffect(() => {
-        syncHeights();
+        const observers = cardRefs.current.map(card => {
+            if (!card) return null;
+            const observer = new ResizeObserver(syncHeights);
+            observer.observe(card);
+            return observer;
+        });
+
         window.addEventListener('resize', syncHeights);
 
         return () => {
             window.removeEventListener('resize', syncHeights);
+            observers.forEach(obs => obs && obs.disconnect());
         };
-    }, [newProductsData]);
+        }, [newProductsData]);
 
   return (
     <div id="products" className={sectionClasses.root}>
@@ -93,33 +100,32 @@ const NewProductSection = () => {
                             height: 'auto',
                             objectFit: 'contain',
                         }}
-                        onLoad={() => syncHeights()}
                     />
                 </Box>
                 <CardContent sx={{ flexGrow: 1 }}>{newProduct.description}</CardContent>
                 {newProduct.links && newProduct.links.length > 0 && (
-                    <Box mt={1}>
-                    <Typography variant="body2" color="textSecondary">
-                        Learn more:
-                    </Typography>
+                    <Box mt={1} sx={{ marginBottom: 'auto' }}>
+                        <Typography variant="body2" color="textSecondary">
+                            Learn more:
+                        </Typography>
 
-                    {newProduct.links.map((link, i) => (
-                        <Box key={i}>
-                        <Link
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            underline="hover"
-                            variant="body2"
-                            display="block"
-                            style={{ color: '#01bf71' }} // default link color
-                            onMouseEnter={e => (e.target.style.color = '#0c7634ff')} // hover color
-                            onMouseLeave={e => (e.target.style.color = '#01bf71')}
-                        >
-                        {link.label}
-                        </Link>
-                        </Box>
-                    ))}
+                        {newProduct.links.map((link, i) => (
+                            <Box key={i}>
+                                <Link
+                                    href={link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    underline="hover"
+                                    variant="body2"
+                                    display="block"
+                                    style={{ color: '#01bf71' }} // default link color
+                                    onMouseEnter={e => (e.target.style.color = '#0c7634ff')} // hover color
+                                    onMouseLeave={e => (e.target.style.color = '#01bf71')}
+                                >
+                                {link.label}
+                                </Link>
+                            </Box>
+                        ))}
                     </Box>
                 )}
                 {/* <CardActions>
