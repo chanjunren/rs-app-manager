@@ -39,20 +39,54 @@ const NewProductSection = () => {
     };
 
     useEffect(() => {
-    const observers = cardRefs.current.map(card => {
-        if (!card) return null;
-        const observer = new ResizeObserver(syncHeights);
-        observer.observe(card);
-        return observer;
+  // Step 1: wait for all images inside cards
+  const images = cardRefs.current
+    .map(card => card && card.querySelector('img'))
+    .filter(Boolean);
+
+  let loadedCount = 0;
+
+  const onImageLoad = () => {
+    loadedCount++;
+    if (loadedCount === images.length) {
+      // sync heights after all images loaded
+      syncHeights();
+    }
+  };
+
+  images.forEach(img => {
+    if (img.complete) {
+      onImageLoad();
+    } else {
+      img.addEventListener('load', onImageLoad);
+      img.addEventListener('error', onImageLoad);
+    }
+  });
+
+  // Step 2: observe card size changes (dynamic content)
+  const observers = cardRefs.current.map(card => {
+    if (!card) return null;
+    const observer = new ResizeObserver(() => {
+      // sync heights after layout stabilizes
+      requestAnimationFrame(syncHeights);
     });
+    observer.observe(card);
+    return observer;
+  });
 
-    window.addEventListener('resize', syncHeights);
+  // Step 3: sync on window resize
+  window.addEventListener('resize', syncHeights);
 
-    return () => {
-        window.removeEventListener('resize', syncHeights);
-        observers.forEach(obs => obs && obs.disconnect());
-    };
-    }, [newProductsData]);
+  // cleanup
+  return () => {
+    window.removeEventListener('resize', syncHeights);
+    images.forEach(img => {
+      img.removeEventListener('load', onImageLoad);
+      img.removeEventListener('error', onImageLoad);
+    });
+    observers.forEach(obs => obs && obs.disconnect());
+  };
+}, [newProductsData]);
 
   return (
     <div id="products" className={sectionClasses.root}>
