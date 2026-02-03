@@ -36,6 +36,7 @@ export const NewProductCardStyles = makeStyles((theme) => ({
   root: {
     padding: '20px',
     background: 'rgba(0, 0, 0, .5)',
+    boxSizing: 'border-box', // ✅ important
   },
   media: {
     height: 0,
