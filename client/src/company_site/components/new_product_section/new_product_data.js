@@ -3,7 +3,8 @@ import platformIcon from '../../images/new_product/temi_platform.png';
 import v3Icon from '../../images/new_product/temi_v3.png';
 import goProIcon from '../../images/new_product/temi_go_pro.png';
 import goIcon from '../../images/new_product/temi_go.png';
-import boxIcon from '../../images/new_product/temi_front_box.png';
+import frontBoxIcon from '../../images/new_product/temi_front_box.png';
+import backBoxIcon from '../../images/new_product/temi_back_box.png';
 
 export const newProductsData = [
     {
@@ -69,7 +70,7 @@ export const newProductsData = [
   {
     title: "temi Front Box",
     description: 'The temi Front Box is designed for front mounting on the temi robot, enabling safe and convenient item transport. It supports up to 3 kg and is available in three designs: open box, box with lid, and box with a lockable lid. Two color options—white and black—are available.',
-    imageSrc: boxIcon,
+    imageSrc: frontBoxIcon,
     links: [
       {
         label: "temi Front Box Variations (PDF)",
@@ -77,5 +78,9 @@ export const newProductsData = [
       },
     ],
   },
-  
+  {
+    title: "temi Back Box",
+    description: 'The temi Back Box is designed to be mounted on the rear tray of the temi robot, providing additional storage capacity during operation. It supports loads of up to 3 kg and is suitable for carrying a wide range of items, including water jugs. The back box also features an optional monopod mounting point, allowing a camera to be installed for extended functionality.',
+    imageSrc: backBoxIcon,
+  },
 ];
