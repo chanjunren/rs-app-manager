@@ -80,7 +80,7 @@ export const newProductsData = [
   },
   {
     title: "temi Back Box",
-    description: 'The temi Back Box is designed to be mounted on the rear tray of the temi robot, providing additional storage capacity during operation. It supports loads of up to 3 kg and is suitable for carrying a wide range of items, including water jugs. The back box also features an optional monopod mounting point, allowing a camera to be installed for extended functionality. Two color options—white and black—are available.',
+    description: 'The temi Back Box is an acrylic box designed to be mounted on the rear tray of the temi robot, providing additional storage capacity during operation. It supports loads of up to 3 kg and is suitable for carrying a wide range of items, including water jugs. The back box also features an optional monopod mounting point, allowing a camera to be installed for extended functionality. Two color options—white and black—are available.',
     imageSrc: backBoxIcon,
   },
 ];
