@@ -3,6 +3,7 @@ import platformIcon from '../../images/new_product/temi_platform.png';
 import v3Icon from '../../images/new_product/temi_v3.png';
 import goProIcon from '../../images/new_product/temi_go_pro.png';
 import goIcon from '../../images/new_product/temi_go.png';
+import boxIcon from '../../images/new_product/temi_front_box.png';
 
 export const newProductsData = [
     {
@@ -29,7 +30,7 @@ export const newProductsData = [
   },
   {
     title: "temi GO PRO",
-    description: 'The advanced quad-door version of temi GO. The perfect solution for cross-floor delivery. Deliver food, drinks or anything you wish in restaurants, food courts, offices, retail and more. Quad-door design with seperate controlled electric doors for easy access and removable partitions for customizable storage. Autonomous point to point delivery system, will take the items from point A to B flawlessly and continue to the next task. Fully controlled by on screen commands, voice and temi center platform.',
+    description: 'The advanced quad-door version of temi GO. The perfect solution for cross-floor delivery. Quad-door design with seperate controlled electric doors for easy access and removable partitions for customizable storage.',
     imageSrc: goProIcon,
     links: [
       {
@@ -62,6 +63,17 @@ export const newProductsData = [
       {
         label: "More Information (PDF)",
         url: "/pdfs/The_Building_Sensory_Nervous_System.pdf",
+      },
+    ],
+  },
+  {
+    title: "temi Front Box",
+    description: 'The temi Front Box is designed for front mounting on the temi robot, enabling safe and convenient item transport. It supports up to 3 kg and is available in three designs: open box, box with lid, and box with a lockable lid. Two color options—white and black—are available.',
+    imageSrc: boxIcon,
+    links: [
+      {
+        label: "temi Front Box Variations (PDF)",
+        url: "/pdfs/temi Front Box Variations.pdf",
       },
     ],
   },
