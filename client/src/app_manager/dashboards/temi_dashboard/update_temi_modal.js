@@ -84,7 +84,7 @@ export default function UpdateTemiModal(props) {
   const updateUnit = async () => {
     if (formState.isFormValid) {
       setNotUpdated(false); // prevent update here
-      const selectedIds = formState.inputs.applications.value.map((appName) => appNameToIdMap[appName]);
+      const selectedIds = formState.inputs.applications.value.map((appName) => appNameToIdMap[appName]).filter(appId => appId); //added filter to remove any unknown app causing bug
 
       await sendRequest(
         editEndpoint, 'PATCH',
