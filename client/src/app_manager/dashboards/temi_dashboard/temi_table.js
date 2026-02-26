@@ -41,7 +41,8 @@ const TemiCollapsibleTable = (props) => {
               .map((unit) => {
                 return (
                   <TemiRow
-                    key={unit.serialNumber}
+                    //key={unit.serialNumber} old code that might cause issue
+                    key={unit.id}//fix the duplicated serial number
                     {...unit}
                     appMap={applicationsMap}
                     showUpdateModal={showUpdateModal}

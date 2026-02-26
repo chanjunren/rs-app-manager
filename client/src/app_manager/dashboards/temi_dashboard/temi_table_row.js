@@ -40,6 +40,7 @@ const TemiRow = (props) => {
   const apiEndpoint = `${process.env.REACT_APP_BACKEND_URL}/api/temis/${id}/`;
   const [open, setOpen] = useState(false);
   const classes = useRowStyles();
+
   return (
     <React.Fragment>
       <TableRow className={classes.root}>
@@ -67,7 +68,8 @@ const TemiRow = (props) => {
                 {applications.map((application) => {
                   let appLabel = appMap[application];
                   return (
-                    <Chip key={appLabel} color="primary" label={appLabel} />
+                    //<Chip key={appLabel} color="primary" label={appLabel} /> //appLabel is not uniue, not suitable to use as key
+                    <Chip key={`${application}-${appLabel}`} color="primary" label={appLabel} />
                   );
                 })}
               </div>
