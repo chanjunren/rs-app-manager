@@ -5,6 +5,7 @@ import goProIcon from '../../images/new_product/temi_go_pro.png';
 import goIcon from '../../images/new_product/temi_go.png';
 import frontBoxIcon from '../../images/new_product/temi_front_box.png';
 import backBoxIcon from '../../images/new_product/temi_back_box.png';
+import fourCastIcon from '../../images/new_product/temi_four_cast.png';
 
 export const newProductsData = [
     {
@@ -82,5 +83,16 @@ export const newProductsData = [
     title: "temi Back Box",
     description: 'The temi Back Box is an acrylic box designed to be mounted on the rear tray of the temi robot, providing additional storage capacity during operation. It supports loads of up to 3 kg and is suitable for carrying a wide range of items, including water jugs. The back box also features an optional monopod mounting point, allowing a camera to be installed for extended functionality. Two color options—white and black—are available.',
     imageSrc: backBoxIcon,
+  },
+  {
+    title: "temi FOURCAST",
+    description: 'Mobile advertising robot built on temi Platform. It offers high-performance regarding on autonomous navigation. Integrated with various functional modules, including four-side 38.8-inch screens, projectors, depth cameras, LiDAR, cliff sensers and camera. These modules enable the robot to deliver innovative and advanced advertising effect experiences to customers.',
+    imageSrc: fourCastIcon,
+    links: [
+      {
+        label: "temi FOURCAST Specs (PDF)",
+        url: "/pdfs/temi FOURCAST Specs.pdf",
+      },
+    ],
   },
 ];
