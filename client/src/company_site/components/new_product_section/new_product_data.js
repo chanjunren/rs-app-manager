@@ -53,6 +53,17 @@ export const newProductsData = [
     ],
   },
   {
+    title: "temi FOURCAST",
+    description: 'Mobile advertising robot built on temi Platform. It offers high-performance regarding on autonomous navigation. Integrated with various functional modules, including four-side 38.8-inch screens, projectors, depth cameras, LiDAR, cliff sensers and camera. These modules enable the robot to deliver innovative and advanced advertising effect experiences to customers.',
+    imageSrc: fourCastIcon,
+    links: [
+      {
+        label: "temi FOURCAST Specs (PDF)",
+        url: "/pdfs/temi FOURCAST Specs.pdf",
+      },
+    ],
+  },
+  {
     title: "KukiSense Indoor Air Quality (IAQ) Sensor",
     description:
       "The KukiSense IAQ Sensor monitors indoor air quality in real time and can be used independently or fully integrated with temi robots for autonomous air quality monitoring across spaces of 10,000 sqm and beyond",
@@ -84,15 +95,5 @@ export const newProductsData = [
     description: 'The temi Back Box is an acrylic box designed to be mounted on the rear tray of the temi robot, providing additional storage capacity during operation. It supports loads of up to 3 kg and is suitable for carrying a wide range of items, including water jugs. The back box also features an optional monopod mounting point, allowing a camera to be installed for extended functionality. Two color options—white and black—are available.',
     imageSrc: backBoxIcon,
   },
-  {
-    title: "temi FOURCAST",
-    description: 'Mobile advertising robot built on temi Platform. It offers high-performance regarding on autonomous navigation. Integrated with various functional modules, including four-side 38.8-inch screens, projectors, depth cameras, LiDAR, cliff sensers and camera. These modules enable the robot to deliver innovative and advanced advertising effect experiences to customers.',
-    imageSrc: fourCastIcon,
-    links: [
-      {
-        label: "temi FOURCAST Specs (PDF)",
-        url: "/pdfs/temi FOURCAST Specs.pdf",
-      },
-    ],
-  },
+
 ];
