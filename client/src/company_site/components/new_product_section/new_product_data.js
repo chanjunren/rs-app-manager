@@ -18,6 +18,7 @@ export const newProductsData = [
         url: "/pdfs/temi V3 Specs.pdf",
       },
     ],
+    tradeInInfo: "Upgrade your temi V1 or V2 for temi V3 and receive a trade-in value of up to 10% of your original purchase price.",
   },
   {
     title: "temi GO",

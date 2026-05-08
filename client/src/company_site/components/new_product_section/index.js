@@ -137,6 +137,26 @@ const NewProductSection = () => {
                     />
                 </Box>
                 <CardContent sx={{ flexGrow: 1 }}>{newProduct.description}</CardContent>
+                {newProduct.tradeInInfo && (
+                  <Box
+                    sx={{
+                      mx: 2,
+                      mb: 2,
+                      px: 1,
+                      py: 1,
+                      backgroundColor: '#f1f8f4',   // light green tint
+                      borderLeft: '6px solid #66bb6a', // muted green accent stripe
+                      borderRadius: '4px',
+                    }}
+                  >
+                    <Typography variant="body2" style={{ fontWeight: 600, color: '#283926', marginBottom: 4, fontSize: '0.85rem' }}>
+                      Trade-In Offer
+                    </Typography>
+                    <Typography variant="body2" style={{ color: '#283926', fontSize: '0.85rem' }}>
+                      {newProduct.tradeInInfo}
+                    </Typography>
+                  </Box>
+                )}
                 {newProduct.links && newProduct.links.length > 0 && (
                     <Box mt={1} sx={{ pt: 1, pb: 2 }}>
                         <Typography variant="body2" color="textSecondary">
