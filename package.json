@@ -9,7 +9,7 @@
     "heroku-postbuild": "cd client && npm install --force && npm run build"
   },
   "engines": {
-    "node": "18.x"
+    "node": "20.x"
   },
   "author": "Chan Jun Ren",
   "license": "ISC",
