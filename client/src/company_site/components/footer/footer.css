@@ -138,3 +138,10 @@
   color: #01bf71;
   transition: 0.3s ease-out;
 }
+
+.footer-bizsafe-img {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  margin-top: 16px; /* small gap below the links */
+}

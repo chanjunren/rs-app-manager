@@ -4,6 +4,7 @@ import './footer.css';
 import Button from '@material-ui/core/Button';
 import LocalPhoneIcon from '@material-ui/icons/LocalPhone';
 import MailIcon from '@material-ui/icons/Mail';
+import bizsafe3Image from '../../images/footer_section/bizsafe3.jpeg'
 
 const Footer = () => {
   return (
@@ -33,6 +34,11 @@ const Footer = () => {
                   <small>+(65) 8303 2264</small>
                 </div>
               </div>
+              <img
+                  src={bizsafe3Image}
+                  alt="BizSafe3"
+                  className='footer-bizsafe-img'
+              />
             </div>
             <div className="footer-link-items">
               <h1 className="footer-link-title">temi</h1>
