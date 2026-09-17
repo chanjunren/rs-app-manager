@@ -6,6 +6,8 @@ import goIcon from '../../images/new_product/temi_go.png';
 import frontBoxIcon from '../../images/new_product/temi_front_box.png';
 import backBoxIcon from '../../images/new_product/temi_back_box.png';
 import fourCastIcon from '../../images/new_product/temi_four_cast.png';
+import drTemiIcon from '../../images/new_product/dr_temi.png';
+import rsConTourIcon from '../../images/new_product/rs_contour.png'
 
 export const newProductsData = [
     {
@@ -61,6 +63,36 @@ export const newProductsData = [
       {
         label: "temi FOURCAST Specs (PDF)",
         url: "/pdfs/temi FOURCAST Specs.pdf",
+      },
+      {
+        label: "temi FOURCAST Brochure (PDF)",
+        url: "/pdfs/temi FOURCAST Brochure.pdf",
+      },
+    ],
+  },
+  {
+    title: "RS ConTour",
+    description: 'RS ConTour is a concierge and tour guide robot that greets visitors and guides them exactly where they need to go — switching seamlessly between wayfinding assistance and narrated tours. Built on temi\'s mobility platform with a 24" interactive display, it\'s ideal for hospitals, malls, museums, and offices.',
+    imageSrc: rsConTourIcon,
+    links: [
+      {
+        label: "RS ConTour Brochure (PDF)",
+        url: "/pdfs/RS ConTour Brochure.pdf",
+      },
+      {
+        label: "RS ConTour Specs (PDF)",
+        url: "/pdfs/RS ConTour Specs.pdf",
+      },
+    ],
+  },
+  {
+    title: "Dr temi",
+    description: 'Dr. temi puts a doctor at the patient\'s bedside in under five minutes, combining secure telemedicine, fall detection, and nursing support in one HIPAA-compliant device trusted by 2,000+ healthcare facilities. Now available in Singapore through Robosolutions.',
+    imageSrc: drTemiIcon,
+    links: [
+      {
+        label: "Dr temi Brochure (PDF)",
+        url: "/pdfs/DrTemi Brochure.pdf",
       },
     ],
   },
